@@ -1,4 +1,4 @@
-# PYTHON 기초 정리하기
+# PYTHON 메모 참고하기.
 
 **(2024.08.12)**  3.py memo 새로운 함수들을 알았다 나중에 써먹기 좋을 듯ㅎ
 
@@ -33,3 +33,17 @@ print(h.isupper())
 ```
 
 **(2024.08.13)** 4.py
+
+
+# extend() 함수
+
+```extend
+list_a =[1,2,3]
+list_b =[4,5,6]
+list_a.extend(list_b)  
+print(list_a)
+```
+
+list_a 는 [1,2,3,4,5,6] 으로 파괴적 처리를 함.
+
+일반적으로 list_a + list_b 한 것 과는 다름.
