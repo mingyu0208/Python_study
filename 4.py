@@ -13,6 +13,16 @@
 # else:
 #     print(a)
 
+# datetime 시간
+# import datetime
+# now = datetime.datetime.now()
+# print(now.year, '년')
+# print(now.month, '월')
+# print(now.day, '일')
+# print(now.hour, '시')
+# print(now.minute, '분')
+# print(now.second, '초')
+
 #  2. 나누어 떨어지는 숫자
 # b = int(input())
 # if b%2==0:
@@ -34,3 +44,10 @@
 #     print(f'{b}는 5로 나누어 떨어지는 숫자 입니다.')
 # else:
 #     print(f'{b}는 5로 나누어 떨어지는 숫자가 아닙니다.')
+
+
+#  04-1  리스트와 반복문
+# 리스트 끼리 더하기
+# list_a = [1,2,3]
+# list_b = [4,5,6]
+# print(list_a+ list_b) # [1, 2, 3, 4, 5, 6]
