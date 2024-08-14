@@ -46,9 +46,44 @@
 # b = [*a, *a] # 비파괴적
 # print(b)
 
-numbers = [1,2,3,4,5,6,7,8,9]
-output = [[], [], []]
+# 결과 1
+# 273 는 홀수 입니다.
+# 103 는 홀수 입니다.
+# 5 는 홀수 입니다.
+# 32 는 짝수입니다.
+# 32 는 홀수 입니다.
+# 65 는 홀수 입니다.
+# 9 는 홀수 입니다.
+# 72 는 짝수입니다.
+# 72 는 홀수 입니다.
+# 800 는 짝수입니다.
+# 800 는 홀수 입니다.
+# 99 는 홀수 입니다.
+# 코드
+# numbers = [273,103,5,32,65,9,72,800,99]
+# for number in numbers:
+#     if number%2==0:
+#         print(f'{number} 는 짝수입니다.')
+#     print(f'{number} 는 홀수 입니다.')
+# ==========================================
+# 결과 2 [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+# numbers = [1,2,3,4,5,6,7,8,9]
+# output = [[], [], []]
 
-for number in numbers:
-    output[].append(number)
-print(output)
+# 코드
+# for number in numbers:
+#     output[(number + 2)%3].append(number)
+# print(output)
+# ==========================================
+
+# 결과
+
+# 코드
+numbers = [1,2,3,4,5,6,7,8,9]
+
+for i in range(0, len(numbers)//2):
+    j = (i * 2) + 1
+    print(f'i= {i}, j={j}')
+    numbers[j] = numbers[j] ** 2
+print(numbers)
+
