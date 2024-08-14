@@ -114,14 +114,61 @@
 #     print(f'{key["name"]} {key["age"]}살')
 # ==========================================
 
-numbers = [1,2,6,8,4,3,2,1,9,5,4,9,7,2,1,3,5,4,8,9,7,2,3]
-counter = {}
+# 숫자가 몇번 등장하는지 출력하는 코드
+# numbers = [1,2,6,8,4,3,2,1,9,5,4,9,7,2,1,3,5,4,8,9,7,2,3]
+# counter = {}
 
-for number in numbers:
-    if number in counter:
-        counter[number] = counter[number]+1
-    else:
-        counter[number] = 1
-print(counter)
+# for number in numbers:
+#     if number in counter:
+#         counter[number] = counter[number] + 1
+#     else:
+#         counter[number] = 1
+# print(counter)
+
+
+# dic = {
+#     'name': '7d 건조 망고',
+#     'type': '다절임',
+#     'ingredient': ['망고', '설탕', '메타중아황산나트륨', '치자황색소'],
+#     'origin': '필리핀'
+# }
+
+# for key in dic:
+#     print(smell_key, ':', dic[key])
+
+
+# ==========================================
+
+# 결과
+# name : 기사
+# level : 12       
+# sword : 불꽃의 검
+# armor : 풀플레이트
+# skill : 베기
+# skill : 세게 베기
+# skill : 아주 세게 베기
+
+# 코드
+# char = {
+#     "name": "기사",
+#     "level": "12",
+#     "items": {
+#         "sword": "불꽃의 검",
+#         "armor": "풀플레이트"
+#     },
+#     "skill": ["베기", "세게 베기", "아주 세게 베기"]
+# }
+
+# for key in char:
+#     if type(char[key]) is dict:
+#         for smell_key in char[key]:
+#             print(smell_key, ":", char[key][smell_key]) 
+#     elif type(char[key]) is list:
+#         for itme in char[key]:
+#             print(key, ":", itme)
+#     else:
+#         print(key, ":", char[key])
+# ==========================================
+
 
 
