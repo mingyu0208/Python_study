@@ -77,13 +77,51 @@
 # ==========================================
 
 # 결과
+# i= 0, j=1
+# i= 1, j=3
+# i= 2, j=5
+# i= 3, j=7
+# [1, 4, 3, 16, 5, 36, 7, 64, 9]
 
 # 코드
-numbers = [1,2,3,4,5,6,7,8,9]
+# numbers = [1,2,3,4,5,6,7,8,9]
 
-for i in range(0, len(numbers)//2):
-    j = (i * 2) + 1
-    print(f'i= {i}, j={j}')
-    numbers[j] = numbers[j] ** 2
-print(numbers)
+# for i in range(0, len(numbers)//2):
+#     j = (i * 2) + 1
+#     print(f'i= {i}, j={j}')
+#     numbers[j] = numbers[j] ** 2
+# print(numbers)
+# ==========================================
+
+# 딕셔너리 요소 추가하기
+# dic = {}
+
+# print("요소 추가 이전:", dic)
+
+# dic["name"] = '새로운 이름'
+# dic["head"] = "새로운 정신"
+# dic["body"] = '새로운 몸'
+# del dic["name"] = "새로운 이름"  # 딕셔너리 삭제
+# print("요소 추가 이후:", dic)
+# ==========================================
+
+# 딕셔너리 조합
+# pets = [{"name": "구름", "age": 5},
+#         {"name": "초코", "age": 3},
+#         {"name": "아지", "age": 1},]
+
+# for key in pets:
+#     print(f'{key["name"]} {key["age"]}살')
+# ==========================================
+
+numbers = [1,2,6,8,4,3,2,1,9,5,4,9,7,2,1,3,5,4,8,9,7,2,3]
+counter = {}
+
+for number in numbers:
+    if number in counter:
+        counter[number] = counter[number]+1
+    else:
+        counter[number] = 1
+print(counter)
+
 
