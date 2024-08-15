@@ -162,13 +162,81 @@
 # for key in char:
 #     if type(char[key]) is dict:
 #         for smell_key in char[key]:
-#             print(smell_key, ":", char[key][smell_key]) 
+#             print(smell_key, ':', char[key][smell_key])
 #     elif type(char[key]) is list:
-#         for itme in char[key]:
-#             print(key, ":", itme)
+#         for elem in char[key]:
+#             print(key, ':', elem)
 #     else:
-#         print(key, ":", char[key])
+#         print(key, ':', char[key])
 # ==========================================
 
 
+# n  = 10
+# a = range(0, int(n/2))
+# print(list(a))
 
+# for i in range(5, 10):
+#     print(f'{i} = 반복 변수')
+# ==========================================
+
+# 역반복문 1
+# for i in range(4, -1, -1):
+#     print("현재 반복 변수: {}".format(i))
+
+# 역반복문 2
+# for i in reversed(range(5)):
+#     print("현재 반복 변수{}".format(i))
+# ==========================================
+
+# 별 피라미드 삼각형
+# for i in range(1,10):
+#     for j in range(i):
+#         print("*",end="")
+#     print()
+# 별 피라미드 삼각형 2
+# output = ""
+# for i in range(1,10):
+#     for j in range(0, i):
+#         output += "*"
+#     output += "\n"
+    
+# print(output)
+# ==========================================
+
+# 반복문 피라미드 만들기
+# output = ""
+# for i in range(1,10):          
+#     for j in range(10,i, -1): 
+#         output += " "  
+#     for k in range(1,i * 2):  
+#         output += "*"
+#     output += "\n"
+# print(output)
+
+#  ## 참고 ##
+# output = ""
+
+# for i in range(1, 10):
+#     output += ("*" * i)
+#     output += "\n"
+# print(output)
+# ==========================================
+
+
+# list_a = [1,2,1,2]
+
+# value = 3
+
+# while value in list_a:
+#     list_a.remove(value)
+# print(list_a)
+
+# 특정 시간동안 프로그램 정지 시키기 
+# import time 
+
+# number = 0
+
+# target_tick = time.time() + 5
+# while time.time() < target_tick:
+#     number+=1
+# print("5초 동안 {}번 반복했습니다.".format(number))
