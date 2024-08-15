@@ -240,3 +240,29 @@
 # while time.time() < target_tick:
 #     number+=1
 # print("5초 동안 {}번 반복했습니다.".format(number))
+# ==========================================
+
+# break 
+# i = 0
+
+# while True:
+
+#     print("{}번째 반복문입니다.".format(i))
+#     i+=1
+#     # 반복을 종료 합니다.
+#     input_text = input("> 종료하시겠습니까?(y/n): ")
+#     if input_text in ["y", "Y"]:
+#         print("반복을 종료합니다.")
+#         break
+
+# ==========================================
+
+# continue
+# numbers = [5, 15, 6, 20, 7, 25]
+
+# for number in numbers:
+#     if number < 10:
+#         continue
+#     print(number)
+
+# ==========================================
