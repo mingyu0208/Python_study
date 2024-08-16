@@ -90,3 +90,53 @@ print(output)
 * `continue `키워드는 반복문의 현재 바복을 생략할 때 사용하는 구문입니다.
 
 > # 문제풀기 (2024. 08. 17)
+
+```
+# 문제 1
+key_list = ["name", "hp", "mp", "level"]
+value_list = ["기사", 200, 30, 5]
+char = {}
+
+for i in range(len(key_list)):
+     char[key_list[i]] = value_list[i]
+# 최종 출력
+print(char)
+
+# 결과: {'name': '기사', 'hp': 200, 'mp': 30, 'level': 5}
+==========================================
+
+# 문제 2
+limit = 10000
+i = 1
+sum_vlaue = 0
+
+while sum_vlaue<=limit:
+    sum_vlaue += i
+    i+=1
+
+print("{}를 더할 떄 {}을 넘으며 그때의 값은 {}입니다.".format(i-1, limit, sum_vlaue))
+
+# 결과: 141를 더할 떄 10000을 넘으며 그때의 값은 10011입니다.
+==========================================
+
+# 문제 3
+
+max_vlaue = 0
+a = 0
+b = 0
+
+for i in range(1, 100//2 + 1):
+    j = 100 - i
+
+temp = i * j
+if max_vlaue < temp:
+    a = i
+    b = j
+    max_vlaue = temp
+
+print("최대가 되는 경우: {} * {} = {}".format(a, b, max_vlaue))
+
+# 결과: 최대가 되는 경우: 50 * 50 = 2500
+
+==========================================
+```
