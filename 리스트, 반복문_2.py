@@ -334,3 +334,52 @@
 # 결과: 최대가 되는 경우: 50 * 50 = 2500
 
 # ==========================================
+ 
+# list_a = [1,2,3,4,5]
+# list_revered = reversed(list_a)
+
+# print("# reversed() 함수")
+# print("reversed([1,2,3,4,5]):", list_revered)
+# print("list(reversed([1,2,3,4,5])):", list(list_revered))
+# print()
+
+# print("# reversed() 함수와 반복문")
+# print("for i in reversed([1,2,3,4,5])):")
+# for i in reversed(list_a):
+#     print("-", i)
+
+# ==========================================
+
+
+# 안되는 예시
+# temp = reversed([1,2,3,4,5,6])
+
+# for i in temp:
+#     print("첫 번째 반복문: {}".format(i))
+
+# for i in temp:
+#     print("두 번째 반복문: {}".format(i))
+
+# 되는 예시
+# numbers = [1,2,3,4,5,6]
+
+# for i in reversed(numbers):
+# 	print("첫 번째 반복문: {}".format(i))
+
+# for i in reversed(numbers):
+# 	print("두 번째 반복문: {}".format(i))
+
+# ==========================================
+
+# enumerate 함수
+# example = ['요소A', '요소B', '요소C']
+
+# print(list(enumerate(example)))
+# 결과: [(0, '요소A'), (1, '요소B'), (2, '요소C')]
+
+# for i, value in enumerate(example): 
+#     print("{}번째 요소는 {}입니다.".format(i,value))
+
+# ==========================================
+
+# 딕셔너리의 items() 함수와 반복문 조합하기 
