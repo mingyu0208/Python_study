@@ -483,3 +483,90 @@
 # 95 : 1011111
 # 합계: 539
 # ==========================================
+
+# (2024. 08. 19)
+# 도전 문제
+
+# 1. 숫자의 종류
+
+# num_list = [1,2,3,4,1,2,3,1,4,1,2,3]
+# answer = {}
+
+# for i in num_list:
+#     if i not in answer:
+#         answer[i] = 0
+#     answer[i] += 1
+
+# print("{}에서".format(num_list))
+# print("사용된 숫자의 종류는 {}개입니다.".format(len(answer)))
+# print("참고: {}".format(answer))
+
+# 결과: [1, 2, 3, 4, 1, 2, 3, 1, 4, 1, 2, 3]에서
+        # 사용된 숫자의 종류는 4개입니다.
+        # 참고: {1: 4, 2: 3, 3: 3, 4: 2}
+# ==========================================
+
+# 2. 염기의 개수
+
+# a = input("염기 서열을 입력해 주세요: ")
+# DNA = {
+#     'a': 0,
+#     't': 0,
+#     'g': 0,
+#     'c': 0
+# }
+
+# for i in a:
+#     DNA[i] +=1
+
+# for key in DNA:
+#     print(f'{key}의 개수: {DNA[key]}')
+
+# 입력 값: ctacaatgtcagtatacccattgcattagccg
+
+# 결과: 
+# 염기 서열을 입력해 주세요: ctacaatgtcagtatacccattgcattagccg
+# a의 개수: 9
+# t의 개수: 9
+# g의 개수: 5
+# c의 개수: 9
+# ==========================================
+
+# 3. 염기 코돈 개수
+
+# a = input("염기 서열을 입력해주세요: ")
+
+# counter = {}
+
+# for i in range(0,len(a)+1, 3):
+#     condon = a[i:i+3]
+#     if len(condon) == 3:
+#         if condon not in counter:
+#             counter[condon] = 0
+#         counter[condon] += 1
+# print(counter)
+
+# 결과:
+# 염기 서열을 입력해주세요: ctacaatgtcagtatacccattgcattagccg
+# {'cta': 1, 'caa': 1, 'tgt': 1, 'cag': 1, 'tat': 1, 'acc': 1, 'cat': 1, 'tgc': 1, 'att': 1, 'agc': 1}
+# ==========================================
+
+# 4. 2차원 리스트 평탄화
+# list_a = [1,2,[3,4], 5, [6,7], [8,9]]
+# list_flatten = []
+
+# for elem in list_a:
+#     if type(elem) == list:
+#         for ans in elem:
+#             list_flatten.append(ans)
+#     else:
+#         list_flatten.append(elem)
+
+# print(f'{list_a}를 평탄화하면\n {list_flatten}입니다.')
+
+# 결과:
+# [1, 2, [3, 4], 5, [6, 7], [8, 9]]를 평탄화하면
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]입니다.
+# ==========================================
+
+
