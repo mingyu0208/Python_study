@@ -34,7 +34,7 @@ print(h.isupper())
 
 > # extend() 함수 (2024.08.13)
 
-```extend
+```python
 list_a =[1,2,3]
 list_b =[4,5,6]
 list_a.extend(list_b)  
@@ -47,7 +47,7 @@ list_a 는 [1,2,3,4,5,6] 으로 파괴적 처리를 함.
 
 > # 파이썬 특정 값이 어떤 자료형인지 확인하는 법 (2024.08.14)
 
-```
+```python
 type("문자열")is str	# 문자열인지 확인
 type([])is list		# 리스트인지 확인
 type({})isdict		# 딕셔너리인지 확인
@@ -55,7 +55,7 @@ type({})isdict		# 딕셔너리인지 확인
 
 > # 반복문 피라미드 만들기 **(2024. 08. 15)**
 
-```
+```python
 output = ""
 
 for i inrange(1,10):
@@ -91,7 +91,7 @@ print(output)
 
 > # 문제풀기 (2024. 08. 17)
 
-```
+```python
 # 문제 1
 key_list = ["name", "hp", "mp", "level"]
 value_list = ["기사", 200, 30, 5]
@@ -141,6 +141,7 @@ print("최대가 되는 경우: {} * {} = {}".format(a, b, max_vlaue))
 ==========================================
 ```
 
+
 > # 문자열, 리스트, 딕셔너리와 관련된 기본 함수 (2024. 08. 18)
 
 * 리스트 뒤집기: `revered()`
@@ -150,7 +151,7 @@ print("최대가 되는 경우: {} * {} = {}".format(a, b, max_vlaue))
 
 > #### 제너레이터
 
-```
+```python
 # 안되는 예시
 temp = reversed([1,2,3,4,5,6])
 for i in temp:
@@ -171,7 +172,7 @@ for i in reversed(numbers):
 
 > #### **enumerate 함수**
 
-```
+```python
 example = ['요소A', '요소B', '요소C']
 print(list(enumerate(example)))
 결과: [(0, '요소A'), (1, '요소B'), (2, '요소C')]
@@ -184,6 +185,8 @@ for i, value inenumerate(example):
 	2번째 요소는 요소C입니다.
 ```
 
+
+
 > # 4장 마무리 (2024. 08. 19)
 
 * `reversed()` 함수는  매개변수에 리스트를 넣으면 요소의 순서를 뒤집을 수 있습니다.
@@ -194,6 +197,31 @@ for i, value inenumerate(example):
 > ### memo
 
 * **염기의 개수**
+
+```python
+a = input("염기 서열을 입력해 주세요: ")    # 입력 값: ctacaatgtcagtatacccattgcattagccg
+DNA = {
+    'a': 0,
+    't': 0,
+    'g': 0,
+    'c': 0
+}
+
+for i in a:
+    DNA[i] +=1
+
+for key in DNA:
+    print(f'{key}의 개수: {DNA[key]}')
+
+
+
+# 결과: 
+# 염기 서열을 입력해 주세요: ctacaatgtcagtatacccattgcattagccg
+# a의 개수: 9
+# t의 개수: 9
+# g의 개수: 5
+# c의 개수: 9
+```
 
 * 염기 코돈 개수
 
