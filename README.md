@@ -190,3 +190,28 @@ for i, value inenumerate(example):
 * `enumberate()` 함수는 매개변수에 리스트를 넣으면 인덱스와 값을 쌍으로 사용해 반복문을 돌릴 수 있게 해주는 함수입니다.
 * `items()` 함수는 키와 쌍으로 사용해 반복문을 돌릴 수 있게 해주는 딕셔너리 함수입니다.
 * 리스트 내포는 반복문과 조건물을 대괄호로 [ ] 안에 넣는 형태를 사용해서 리스트를 생성하는 파이썬의 특수한 구문입니다. "list comprehensions"기억하기 !!
+
+> ### memo
+
+* **염기의 개수**
+
+* 염기 코돈 개수
+
+```python
+
+a = input("염기 서열을 입력해주세요: ")
+
+counter = {}
+
+for i in range(0,len(a)+1, 3):
+    condon = a[i:i+3]
+    if len(condon) == 3:
+        if condon not in counter:
+            counter[condon] = 0
+        counter[condon] += 1
+print(counter)
+
+# 결과:
+# 염기 서열을 입력해주세요: ctacaatgtcagtatacccattgcattagccg
+# {'cta': 1, 'caa': 1, 'tgt': 1, 'cag': 1, 'tat': 1, 'acc': 1, 'cat': 1, 'tgc': 1, 'att': 1, 'agc': 1}
+```
