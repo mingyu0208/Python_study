@@ -241,7 +241,6 @@ print(counter)
 # {'cta': 1, 'caa': 1, 'tgt': 1, 'cag': 1, 'tat': 1, 'acc': 1, 'cat': 1, 'tgc': 1, 'att': 1, 'agc': 1}
 ```
 
-
 > # 5가지 키워드로 정리하는 핵심 포인트 함수
 
 * **호출**은 함수를 실행하는 행위를 말합니다.
@@ -249,3 +248,21 @@ print(counter)
 * **리턴값**은 함수의 최종적인 결과를 의미합니다.
 * **가변 매개변수** 함수는 매개변수를 원하는 만큼 받을 수 있는 함수입니다.
 * **기본 매개변수**는 매개변수에 아무것도 넣지 않아도 들어가는 값입니다.
+
+
+> #### lambda함수
+
+```python
+#문자열의 개수를 기준으로 정렬
+list_str = ['hi', 'this', 'hello', 'python']
+print(sorted(list_str, key=lambda x: len(x)))
+
+
+#특정 문자(x[n])을 기준으로 정렬
+print(sorted(list_str, key=lambda x: x[n]))
+
+
+#2차원 리스트 중 한 요소 기준으로 정렬
+list_num = [[1, '가'], [3, '다'], [4, '라'], [2, '나']]
+print(sorted(list_num, key=lambda x: x[0]
+```

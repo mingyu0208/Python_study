@@ -96,6 +96,7 @@
 # print("5!:", fibonacci(5))
 
 # ==========================================
+# 재귀 함수로 구현한 피보나치 수열(2)
 # counter = 0
 # def fibonacci(n):
 #     global counter    #global 외부 참조
@@ -106,7 +107,35 @@
 #         return 1
 #     else:
 #         return fibonacci(n - 1) + fibonacci(n - 2)
-# print(fibonacci(10))
+# print(fibonacci(1))
+# print(fibonacci(2))
+# print(fibonacci(3))
+# print(fibonacci(4))
+# print(fibonacci(5))
+
+# ==========================================
+
+# 재귀 함수로 구현한 피보나치 수열(3)
+# counter = 0
+
+# def fibonacci(n):
+#     counter+=1    # counter가 외부에 있는 것을 들고 오지 못함 그래서 global로 불러오는 것임.
+#     if n == 1:
+#         return 1
+#     if n == 2:
+#         return 1
+#     else:
+#         return fibonacci(n - 1) + fibonacci(n - 2)
+# print(fibonacci(1))
+# print(fibonacci(2))
+# print(fibonacci(3))
+# print(fibonacci(4))
+# print(fibonacci(5))
+
+# 에러: UndoundLocalError
+
+# ==========================================
+# 메모화(재귀함수 사용시 많이 사용한다.): 딕셔너리를 사용해서 한 번 계산한 값을 저장합니다. 이를 메모한다고 표현합니다. 딕셔너리에 값이 메모되어 있으면 처리를 수행하지 않고 곧바로 메모된 값을 돌려주면서 코드의 속도를 빠르게 만드는 것입니다. 
 
 # dictionary = {
 #     1:1,
@@ -126,3 +155,42 @@
 # print("30!:", fibonacci(30))
 # print("40!:", fibonacci(40))
 # print("50!:", fibonacci(50))
+# ==========================================
+
+
+# extend()함수는 리스트연산 가능한 함수임.
+# ex) a = [1,2,3] b = [4,5,6]를 a+=b 한 것과 같음 
+# 결과:[1,2,3,4,5,6]
+
+# ==========================================
+# 재귀 함수 100명의 사람이 하나 이상의 테이블에 나눙 앉는 패턴의 경우의 수를 구하세요.
+
+#  메모활용, 재귀처리 방법까지 다 배울 수 있었음.
+# min_people = 2
+# max_people = 10
+# all_people = 100
+# memo = {}
+
+# def question(remain_people, sit_people):
+#     key = str([remain_people, sit_people])
+
+#     # 종료 조건
+#     if key in memo:
+#         return memo[key]
+    
+#     if remain_people < 0:
+#         return 0
+    
+#     if remain_people == 0:
+#         return 1
+    
+#     # 재귀 처리
+#     cnt = 0
+#     for i in range(sit_people, max_people + 1):
+#         cnt += question(remain_people - i, i)
+
+#     memo[key] = cnt
+
+#     return cnt
+
+# print(question(all_people, min_people))
