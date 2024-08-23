@@ -197,10 +197,75 @@
 
 # ==========================================
 
-
 #  함수 고급
 #  튜플: 리스트와 다르게 한번 결정된 요소를 바꿀 수 없다. 
-#  람다: 매개변수로 함수를 전달사기 위해 함수 구문을 작성하는 것이 번거롭고, 코드 공간 낭비라는 생각이 ㄷ르 때 함수를 간단하고 쉽게 선언하는 방법. 
+#  람다: 매개변수로 함수를 전달사기 위해 함수 구문을 작성하는 것이 번거롭고, 코드 공간 낭비라는 생각이 다를 때 함수를 간단하고 쉽게 선언하는 방법. 
 
 # 튜플은 괄호가 없이도 여러 값을 할당할 수 있어 유용할 듯 함. ex) tuple_list = 10, 20, 30, 40
+# ==========================================
+
+# 변수의 값을 교환하는 튜플
+# a,b = 10, 20 
+# print('a:',a)
+# print('b:', b)
+
+# a,b = b,a # ab 교환
+
+# print('a:',a)
+# print('b:', b)
+# ==========================================
+# 여러 개의 값 리턴하기
+# def test():
+#     return (10,20)
+# a,b = test()
+# print(a,b)
+# ==========================================
+
+# ** 중요 **
+# enumerate() 함수와 items() 함수를 사용할때 i,value는 (i,value) 형태의 튜플에서 괄호를 제거한 것이다.
+# for i, value in enumerate([1,2,3,4,5,6]):
+#     print('{}번째 요소는 {}입니다.'.format(i,value))
+# ==========================================
+# map(), filter() 함수
+# def power(item):
+#     return item * item
+
+# def under_3(item):
+#     return item < 3
+
+# list_input_a = [1,2,3,4,5]
+
+
+# #  map() 함수를 사용합니다.
+# output_a = map(power, list_input_a)
+# print("# map()함수의 실행 결과")
+# print("map(power, lsit_input_a): ", output_a)
+# print("map(power, list_input_a): ", list(output_a))
+# print()
+
+# #  filter() 함수를 사용합니다.
+# output_b = filter(under_3, list_input_a)
+# print("# filter() 함수의 실행 결과")
+# print("filter(under_3, list_input_a): ", output_b)
+# print("filter(under_3, list_input_a):", list(output_b))
+# ==========================================
+
+# 람다:코드 공간 낭비라는 생각이 다를 때 함수를 간단하고 쉽게 선언하는 방법. 
+# power = lambda x: x * x
+# under_3 = lambda x: x < 3
+
+# list_input_a = [1,2,3,4,5]
+
+# #  map() 함수를 사용합니다.
+# output_a = map(power, list_input_a)
+# print("# map()함수의 실행 결과")
+# print("map(power, lsit_input_a): ", output_a)
+# print("map(power, list_input_a): ", list(output_a))
+# print()
+
+# #  filter() 함수를 사용합니다.
+# output_b = filter(under_3, list_input_a)
+# print("# filter() 함수의 실행 결과")
+# print("filter(under_3, list_input_a): ", output_b)
+# print("filter(under_3, list_input_a):", list(output_b))
 
