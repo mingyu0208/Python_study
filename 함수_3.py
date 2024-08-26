@@ -268,4 +268,113 @@
 # print("# filter() 함수의 실행 결과")
 # print("filter(under_3, list_input_a): ", output_b)
 # print("filter(under_3, list_input_a):", list(output_b))
+# ==========================================
+
+# 제너레이터: 이터레이터를 직접 만들 때 사용하는 코드로, 함수 내부에 yield 키워드를 사용하면 해당 함수는 제너레이터 함수가 되며, 일반 함수와는 달리 함수를 호출해도 함수 내부의 코드가 실행되지 않는다. 
+
+# def test():
+#     print("함수가 호출되었습니다.")
+#     yield "test"
+
+# print("A 지점 통과")
+# test()
+
+# print("B 지점 통과")
+# test()
+# print(test())
+
+# 결과: 
+# A 지점 통과
+# B 지점 통과
+# <generator object test at 0x000001BA81A44C40>
+
+# def test():
+#     print("A 지점 통과")
+#     yield 1
+#     print("B 지점 통과")
+#     yield 1
+#     print("c 지점 통과")
+
+# output = test()
+
+# print("D 지점 통과")
+# a = next(output)
+# print(a)
+
+# print("E 지점 통과")
+# b = next(output)
+# print(b)
+
+# print("F 지점 통과")
+# c = next(output)
+# print(c)
+
+
+# next(output)
+#  next로 그 다음을 실행하는 거고, 위 코드 처럼 코드를 조금씩 실행할 때 쓰는 함수임. 
+# ==========================================
+
+# books = [{"제목": "혼자 공부하는 파이썬", 
+#         "가격": 18000
+# }, {
+#         "제목": "혼자 공부하는 머신러닝 + 딥러닝",
+#         "가격": 26000
+# }, {
+#         "제목": "혼자 공부하는 자바스크립트",
+#         "가격": 24000
+# }]
+
+# *** 여기서 가격이 제일 큰 값과 작은 값을 가져올려면? ***
+
+
+# def pricePirnt(book):
+#     return book["가격"]
+
+# lambda 함수로 간단히 작성 가능 !
+# print(" # 가장 저렴한 책")
+# print(min(books, key=lambda book: book["가격"]))
+# print()
+
+# print(" # 가장 비싼 책")
+# print(max(books, key=lambda book: book["가격"]))
+# ==========================================
+
+# lambda로 오름차순 정렬
+
+# books = [{"제목": "혼자 공부하는 파이썬", 
+#         "가격": 18000
+# }, {
+#         "제목": "혼자 공부하는 머신러닝 + 딥러닝",
+#         "가격": 26000
+# }, {
+#         "제목": "혼자 공부하는 자바스크립트",
+#         "가격": 24000
+# }]
+
+# print('# 오름차순 정렬')
+# books.sort(key=lambda x: x["가격"])
+# for i in books:
+#     print(i)
+# ==========================================
+
+# 확인 문제 1
+# a = [1,2,3]
+# print("::".join(map(str,a)))
+# ==========================================
+
+# 확인 문제 2
+# numbers = list(range(1,10 + 1))
+
+# print(" # 홀수만 추출하기")
+# print(list(filter(lambda x: x%2==1, numbers)))
+# print()
+
+# print("# 3이상, 7미만 추출하기")
+# print(list(filter(lambda x: x>3 and x<7, numbers)))
+# print()
+
+# print(" # 제곱해서 50 미만 추출하기")
+# print(list(filter(lambda x: x**2< 50, numbers)))
+# ==========================================
+
 
