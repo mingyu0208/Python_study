@@ -5,7 +5,11 @@
 ```python
 # isalnum(): 문자열이 알파벳 또는 숫자로만 구성되어 있는지 확인
 b = "asdf123"
-print(b.isalnum()) 
+print(b.isalnum())
+
+# isnumeric(): 주어진 문자열이 숫자로 되어있는지 검사하는 함수
+a = '1abc234'
+print(a.isnumeric())
 
 # isalpha(): 문자열이 알파벳으로만 구성되어 있는지 확인
 c = "asdf"
